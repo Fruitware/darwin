@@ -1,0 +1,29 @@
+{
+  "author": {
+    "name": "Fruiware"
+  },
+  "bugs": {
+    "url": "https://github.com/fruitware/darwin/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    
+  },
+  "deprecated": false,
+  "description": "A beautiful Design System for Bootstrap 4. It's Free and Open Source.",
+  "devDependencies": {
+    
+  },
+  "homepage": "https://github.com/fruitware/darwin/blob/master/LICENSE.md",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "darwin-design-system",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fruitware/darwin.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

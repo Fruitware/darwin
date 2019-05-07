@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Noir Pro";
+  src: url("noirpro/noirPro/NoirPro-Regular.otf");
+  src: url("noirpro/noirPro/NoirPro-Regular.woff") format("woff"), url("noirpro/noirPro/NoirPro-Regular.woff2") format("woff2"), url("noirpro/noirPro/NoirPro-Regular.eot");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noir Pro";
+  src: url("noirpro/noirPro/NoirPro-Bold.otf");
+  src: url("noirpro/noirPro/NoirPro-Bold.woff") format("woff"), url("noirpro/noirPro/NoirPro-Bold.woff2") format("woff2"), url("noirpro/noirPro/NoirPro-Bold.eot");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noir Pro";
+  src: url("noirpro/noirPro/NoirPro-Heavy.otf");
+  src: url("noirpro/noirPro/NoirPro-Heavy.woff") format("woff"), url("noirpro/noirPro/NoirPro-Heavy.woff2") format("woff2"), url("noirpro/noirPro/NoirPro-Heavy.eot");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noir Pro";
+  src: url("noirpro/noirPro/NoirPro-Light.otf");
+  src: url("noirpro/noirPro/NoirPro-Light.woff") format("woff"), url("noirpro/noirPro/NoirPro-Light.woff2") format("woff2"), url("noirpro/noirPro/NoirPro-Light.eot");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noir Pro";
+  src: url("noirpro/noirPro/NoirPro-Medium.otf");
+  src: url("noirpro/noirPro/NoirPro-Medium.woff") format("woff"), url("noirpro/noirPro/NoirPro-Medium.woff2") format("woff2"), url("noirpro/noirPro/NoirPro-Medium.eot");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noir Pro";
+  src: url("noirpro/noirPro/NoirPro-SemiBold.otf");
+  src: url("noirpro/noirPro/NoirPro-SemiBold.woff") format("woff"), url("noirpro/noirPro/NoirPro-SemiBold.woff2") format("woff2"), url("noirpro/noirPro/NoirPro-SemiBold.eot");
+  font-weight: 700;
+  font-style: normal;
+}

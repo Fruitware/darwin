@@ -16,6 +16,7 @@
 
 <p>Within the download you’ll find the following directories and files:</p>
 
+<pre>
 darwin/
 ├── LICENSE.md
 ├── README.md
@@ -43,3 +44,4 @@ darwin/
       ├── nouislider/
       ├── nucleo/
       ├── popper/
+</pre>

@@ -1,6 +1,6 @@
 @mixin badge-variant($bg) {
 	color: saturate(darken($bg, 10%), 10);
-	background-color: transparentize(lighten($bg, 25%), .5);
+	background-color: $bg;
 	border: 0px solid $bg;
 
   	&[href] {

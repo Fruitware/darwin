@@ -1,7 +1,11 @@
 .badge {
-    text-transform: $badge-text-transfom;
+    text-transform: none;
 
     a {
+        color: #FFF;
+    }
+
+    &:not(.badge-outline):not(.badge-secondary):not(.badge-white){
         color: #FFF;
     }
 }

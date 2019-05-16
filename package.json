@@ -1,6 +1,6 @@
 {
   "_from": "https://github.com/Fruitware/darwin/tarball/master",
-  "_id": "darwin@1.0.2",
+  "_id": "darwin@1.0.3",
   "_inBundle": false,
   "_integrity": "sha512-8wAIGZ86xxXZp2P5KPa9y7s+eRiS9UTiF6L4qj6aaHXML3UCyc/oz2mY6i1idizOe/9tF7f3+fxZGOT4/wAvSw==",
   "_location": "/darwin",
@@ -42,5 +42,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.2"
+  "version": "1.0.3"
 }

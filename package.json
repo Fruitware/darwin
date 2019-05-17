@@ -1,8 +1,8 @@
 {
   "_from": "https://github.com/Fruitware/darwin/tarball/master",
-  "_id": "darwin@1.0.3",
+  "_id": "darwin@1.0.4",
   "_inBundle": false,
-  "_integrity": "sha512-8wAIGZ86xxXZp2P5KPa9y7s+eRiS9UTiF6L4qj6aaHXML3UCyc/oz2mY6i1idizOe/9tF7f3+fxZGOT4/wAvSw==",
+  "_integrity": "sha512-9psiY49GLiEoKaLmzqLRilCC8xQtG3rVVaf+AYa7dwnDdVmS/SHGJ3lYqP9RrWNaQHqTJnnEJ0w+c7Dgu+/KMQ==",
   "_location": "/darwin",
   "_phantomChildren": {},
   "_requested": {
@@ -17,7 +17,7 @@
     "/"
   ],
   "_resolved": "https://github.com/Fruitware/darwin/tarball/master",
-  "_shasum": "0ed949a3f2b8bb4878c4290028e8437d11759cc0",
+  "_shasum": "07dacde61bfd50d6125ff38c2452b140320cea77",
   "_spec": "https://github.com/Fruitware/darwin/tarball/master",
   "_where": "D:\\jack\\projects\\darwin\\documentationCli",
   "author": {
@@ -42,5 +42,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.3"
+  "version": "1.0.4"
 }

@@ -589,7 +589,7 @@ $custom-control-indicator-checked-color:        $component-active-color !default
 $custom-control-indicator-checked-bg:           $component-active-bg !default;
 $custom-control-indicator-checked-border-color: $component-active-border-color !default;
 $custom-control-indicator-checked-box-shadow:   $custom-control-indicator-box-shadow !default;
-$custom-control-indicator-checked-disabled-bg:  rgba(theme-color("primary"), .5);
+$custom-control-indicator-checked-disabled-bg:  rgba(theme-color("default"), .5);
 
 $custom-control-indicator-disabled-bg:          $gray-200 !default;
 $custom-control-label-disabled-color:           $gray-600 !default;
@@ -811,11 +811,11 @@ $pagination-box-shadow:             0px 3px 10px rgba(0, 0, 0, 0.1) !default;
 $pagination-focus-box-shadow:       0px 10px 20px rgba(0, 0, 0, 0.15) !default;
 
 $pagination-hover-color:            $white !default;
-$pagination-hover-bg:               $darkblue !default;
+$pagination-hover-bg:               $default !default;
 $pagination-hover-border-color:     transparent !default;
 
 $pagination-active-color:           $white !default;
-$pagination-active-bg:              $darkblue !default;
+$pagination-active-bg:              $default !default;
 $pagination-active-border-color:    $pagination-active-bg !default;
 $pagination-active-box-shadow:      $btn-hover-box-shadow !default;
 

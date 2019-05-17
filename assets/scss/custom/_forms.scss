@@ -7,11 +7,15 @@ label {
 .form-control {
     font-size: $input-btn-font-size;
     
+    
     &:focus {
         &::placeholder {
             color: $input-focus-placeholder-color;
         }
     }
+}
+textarea.form-control {
+    background: #fff;
 }
 
 

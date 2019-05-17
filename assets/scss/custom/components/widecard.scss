@@ -1,0 +1,240 @@
+#widecardContainer {
+    height: 430px;
+    background-color: #343434;
+    background-size: cover !important;
+    background-position: center center !important;
+    color: #F3F3F3;
+    text-align: left;
+
+    .widecardLeft {
+        width: 95%;
+        height: 100%;
+        max-width: 1150px;
+        display: grid;
+        grid-template-columns: max-content auto;
+
+        #leftSide {
+            align-self: end;
+            display: block;
+            position: relative;
+            bottom: 80px;
+            height: max-content;
+            width: max-content;
+
+            span {
+                display: block;
+                font-weight: 700;
+                max-width: 280px;
+                width: max-content;
+                margin-bottom: 15px;
+                font-size: 2.5rem;
+                line-height: 2.5rem;
+            }
+            p {
+                font-size: 1.3rem;
+                line-height: 1.5rem;
+                font-weight: 500;
+            }
+            button {
+                font-family: 'Noir Pro', sans-serif;
+                margin-top: 30px;
+                color: #f3f3f3;
+                border-width: 2px;
+                min-width: 160px;
+                width: max-content;
+                padding-right: 30px;
+                padding-left: 30px;
+                height: 40px;
+                text-transform: none;
+                font-size: 1rem;
+                line-height: initial;
+
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+        #rightSide {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-content: right;
+            align-items: center;
+            grid-gap: 1vw;
+            grid-auto-flow: column;
+            grid-template-columns: repeat(auto,max-content);
+
+            @media (max-width: 1120px) {
+                #itemCardLinkContainer:nth-child(3){
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .widecardCenter {
+        width: 90%;
+        height: 100%;
+        max-width: 1150px;
+        display: grid;
+        grid-template-columns: 78% auto;
+        grid-template-rows: 100%;
+        text-align: center;
+
+        #leftSide {
+            justify-self: right;
+            align-self: center;
+            height: max-content;
+            width: max-content;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            grid-gap: 20px;
+
+            span {
+                display: block;
+                font-weight: 700;
+                margin-bottom: 5px;
+                font-size: 2.5rem;
+                line-height: 3rem;
+                max-width: 620px;
+            }
+            p {
+                font-size: 1.2rem;
+                line-height: 1.5rem;
+                max-width: 260px;
+
+                b {
+                    font-weight: 600;
+                }
+            }
+            button {
+                font-family: 'Noir Pro', sans-serif;
+                margin-top: 17px;
+                color: #f3f3f3;
+                border-width: 2px;
+                min-width: 160px;
+                width: max-content;
+                padding-right: 30px;
+                padding-left: 30px;
+                height: 40px;
+                text-transform: none;
+                font-size: 1rem;
+                line-height: initial;
+
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+        #rightSide {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-content: right;
+            align-items: center;
+            grid-gap: 1vw;
+            align-self: right;
+        }
+    }
+    
+    @media (max-width: 1060px) {
+        .widecardCenter {
+            grid-template-columns: 71% auto;
+        }
+    }
+    .blackColorTheme {
+        color: #231F20;
+
+        #leftSide {
+            button {
+                border-color: #231F20;
+                color: #231F20 !important;
+    
+                &:hover {
+                    color: #f3f3f3 !important;
+                    background: #231F20 !important;
+                }
+            }
+        }
+    }
+}
+.widcardCenterAlignment {
+    @media (max-width: 850px){
+        display: none !important;
+    }
+}
+
+
+
+/*              PHONE              */
+@media (max-width: 850px) {
+    .spaceForPhone {
+        display: block !important;
+    }
+    #widecardContainer {
+        height: max-content;
+        width: 100vw;
+        overflow: hidden;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-position: 34% center !important;
+        
+        &.withItems {
+            background-size: 450% !important;
+            background-position: 16% 92% !important;
+
+            button {
+                display: none !important;
+            }
+        }
+
+        .widecardLeft {
+            width: calc(100vw - 30px);
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(2, max-content);
+            overflow: visible;
+
+            #leftSide {
+                position: initial;
+                padding-bottom: 5px;
+    
+                span {
+                    font-size: 30px;
+                    line-height: 36px;
+                    max-width: calc(100vw - 30px) !important;
+                    width: max-content !important;
+                    margin-bottom: 10px;
+                }
+                p {
+                    max-width: calc(100vw - 30px) !important;
+                    width: max-content !important;
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+            }
+            #rightSide {
+                position: relative;
+                left: -15px;
+                width: 100vw;
+                grid-gap: 10px;
+                overflow: auto;
+                padding-bottom: 10px;
+                padding-top: 10px;
+                justify-content: left;
+
+                #itemCardLinkContainer {
+                    &:first-child {
+                        margin-left: 15px;
+                    }
+                    &:last-child {
+                        margin-right: 15px;
+                    }
+                }
+                #itemCardLinkContainer:nth-child(3){
+                    display: grid;
+                }
+            }
+        }
+    }
+}

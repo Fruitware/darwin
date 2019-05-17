@@ -36,6 +36,7 @@
     .custom-control-input {
         &:checked {
             ~ .custom-control-label {
+                font-weight: 600;
                 &::before {
                     box-shadow: $input-focus-alternative-box-shadow;
                 }
@@ -54,12 +55,21 @@
 .custom-checkbox {
     .custom-control-input~.custom-control-label {
         cursor: pointer;
+        color: $black;
         font-size: $font-size-sm;
     }
 
     .custom-control-input {
+        ~ .custom-control-label {
+            &::before {
+                background-color: #fff;
+                border-color: $gray-600;
+                border-width: 2px;
+            }
+        }
         &:checked {
             ~ .custom-control-label {
+                font-weight: 600;
                 &::before {
                     border-color: $custom-control-indicator-checked-border-color;
                 }
@@ -72,11 +82,13 @@
         &:disabled {
             ~ .custom-control-label {
                 &::before {
-                    border-color: $custom-control-indicator-disabled-bg;
+                    border: none;
+                    background: $white;
                 }
             }
 
             &:checked {
+                font-weight: 600;
                 &::before {
                     border-color: $custom-control-indicator-checked-disabled-bg;
                 }
@@ -88,13 +100,22 @@
 // Radios
 .custom-radio {
     .custom-control-input~.custom-control-label {
+        color: $black;
         cursor: pointer;
         font-size: $font-size-sm;
     }
 
     .custom-control-input {
+        ~ .custom-control-label {
+            &::before {
+                background-color: #fff;
+                border-color: $gray-600;
+                border-width: 2px;
+            }
+        }
         &:checked {
             ~ .custom-control-label {
+                font-weight: 600;
                 &::before {
                     border-color: $custom-control-indicator-checked-border-color;
                 }
@@ -107,11 +128,13 @@
         &:disabled {
             ~ .custom-control-label {
                 &::before {
-                    border-color: $custom-control-indicator-disabled-bg;
+                    border: none;
+                    background: $white;
                 }
             }
 
             &:checked {
+                font-weight: 600;
                 &::before {
                     border-color: $custom-control-indicator-checked-disabled-bg;
                 }

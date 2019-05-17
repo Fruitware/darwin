@@ -1,0 +1,141 @@
+#localHeaderContainer {
+    display: flex;
+    width: 100%;
+    height: max-content;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+
+    #localHeader {
+        display: grid;
+        min-width: max-content;
+        width: 95%;
+        max-width: 1155px;
+        height: 65%;
+        align-items: center;
+        justify-items: center;
+        color: #000;
+        font-size: 1rem;
+        overflow: visible;
+
+        &.gridcolumns1{grid-template-columns: repeat(1,max-content)}
+        &.gridcolumns2{grid-template-columns: repeat(2,max-content)}
+        &.gridcolumns3{grid-template-columns: repeat(3,max-content)}
+        &.gridcolumns4{grid-template-columns: repeat(4,max-content)}
+        &.gridcolumns5{grid-template-columns: repeat(5,max-content)}
+        &.gridcolumns6{grid-template-columns: repeat(6,max-content)}
+        &.gridcolumns7{grid-template-columns: repeat(7,max-content)}
+        &.gridcolumns8{grid-template-columns: repeat(8,max-content)}
+        &.gridcolumns9{grid-template-columns: repeat(9,max-content)}
+        &.gridcolumns10{grid-template-columns: repeat(10,max-content)}
+
+        #phoneCategories {
+            display: none;
+        }
+
+        .localHeaderItem {
+            width: 100%;
+            height: 60px;
+            max-width: 165px;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            grid-template-columns: 100%;
+            grid-template-rows: 100% auto;
+            transition: .3s ease;
+            cursor: pointer;
+            &:hover {
+                background: var(--black);
+                .localHeaderItemHeadlineContainer {
+                    color: var(--white) !important;
+                    h3 {
+                        color: var(--white) !important;
+                    }
+                }
+                .localHeaderCategoryInfo {
+                    z-index: 9;
+                    opacity: 1;
+                }
+            }
+            @media (max-width: 1175px) {
+                max-width: 14vw;
+            }
+            .localHeaderItemHeadlineContainer {
+                color: var(--black);
+                font-size: 1rem;
+
+                h3 {
+                    font-size: 1rem;
+                    display: inline;
+                    margin: 0;
+                    font-weight: 600;
+                }
+                .icon {
+                    position: relative;
+                    top: 5px;
+                    margin-right: 8px;
+                    font-size: 1.3rem;
+                }
+            }
+            .localHeaderCategoryInfo {
+                display: grid;
+                justify-self: center;
+                align-self: start;
+                opacity: 0;
+                z-index: -1;
+                width: 326px;
+                min-height: 367px;
+                background: #fff;
+                transition: .3s ease;
+                transition-delay: .01s;
+                padding: 18px 20px 18px 20px;
+                grid-template-columns: repeat(2,1fr);
+                grid-gap: 10px;
+                text-align: left;
+                color: var(--black);
+                cursor: default;
+                &.firstLocalHeaderItem {
+                    justify-self: left;
+                }
+                &.lastLocalHeaderItem {
+                    justify-self: right;
+                }
+                span {
+                    cursor: pointer;
+                }
+                div:nth-child(2){
+                    justify-self: end;
+                }
+                .localHeaderInfoHeadline {
+                    display: block;
+                    font-size: 1rem;
+                    margin-bottom: 10px;
+                    font-weight: 600;
+
+                    i {
+                        font-size: 18px;
+                        position: relative;
+                        top: 3px;
+                        margin-right: 3px;
+                    }
+                }
+                .localHeaderInfoItem {
+                    display: block;
+                    font-size: 14px;
+                    margin-bottom: 4px;
+                    font-weight: 500;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                .localHeaderInfoOtherTabs {
+                    display: block;
+                    font-size: 1rem;
+                    margin-bottom: 10px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,310 @@
+#darwinMapMainContainer {
+    background: var(--white);
+    height: max-content;
+    padding-top: 40px;
+    padding-bottom: 50px;
+
+    #darwinMapContainer.desktop {
+        #darwinMapHeadline {
+            font-size: 30px;
+            height: 36px;
+            font-weight: 700;
+            text-align: left;
+            display: grid;
+            grid-template-columns: repeat(2,max-content);
+            margin-bottom: 30px;
+    
+            #dropDownContainer {
+                color: var(--darkblue);
+                cursor: pointer;
+    
+                .icon-dropdown {
+                    position: relative;
+                    top: -4px;
+                }
+    
+                li {
+                    font-size: 22px;
+                    line-height: 23px;
+    
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    
+        #mainMapContainer {
+            display: grid;
+            width: 100%;
+            grid-template-columns: max-content auto;
+            grid-template-rows: 100%;
+            grid-gap: 12px;
+            height: 435px;
+            border-radius: 4px;
+            overflow: hidden;
+            background: #fff;
+    
+            
+        }   
+    }
+
+    #darwinMapContainer.mobile {
+        display: none;
+    }
+}
+
+#mapShops {
+    height: 100%;
+    width: 475px;
+    padding-left: 20px;
+    padding-right: 12px;
+    text-align: left;
+    overflow: auto;
+
+    /* width */
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #fff;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #C7C7C7;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: var(--gray); 
+    }
+
+    .shopState {
+        display: block;
+        font-weight: 500;
+        margin-top: 20px;
+        color: var(--gray);
+        margin-bottom: 10px;
+    }
+}
+.shopItem {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-rows: repeat(3,max-content);
+    grid-template-columns: 100%;
+    &.closestShop {
+        .shopAdress {
+            color: var(--darkblue);
+            font-weight: 600;
+        }
+        .badge {
+            background: var(--darkblue);
+        }
+        .shopAdressSpan {
+            max-width: 53vw !important;
+        }
+    }
+    &.closeShop {
+        .shopAdress {
+            font-weight: 600;
+        }
+        .badge {
+            background: var(--yellow);
+        }
+        .shopAdressSpan {
+            max-width: 53vw !important;
+        }
+    }
+    
+    .shopAdress {
+        width: 100%;
+        display: grid;
+        color: var(--black);
+        font-weight: 500;
+        margin-bottom: 3px;
+        height: max-content;
+        grid-template-columns: max-content auto;
+
+        .shopAdressSpan {
+            width: 100%;
+            line-height: 20px;
+            max-width: 82vw;
+        }
+
+        .badge {
+            width: max-content;
+            height: 23px;
+            min-width: 75px;
+            justify-self: end;
+            align-self: center;
+            color: var(--white);
+            font-size: 14px;
+            line-height: 14px;
+            padding-top: 2.5px;
+            padding-bottom: 1px;
+            font-weight: 400;
+
+            i {
+                position: relative;
+                top: 1.5px;
+            }
+        }
+    }
+    .shopTime {
+        display: block;
+        color: var(--gray);
+
+        i {
+            font-size: 19px;
+            position: relative;
+            top: 4px;
+        }
+    }
+    .shopContact {
+        display: block;
+        color: var(--black);
+        font-weight: 500;
+    }
+}
+
+#darwinMap,#phoneDarwinMap {
+    outline: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--white);
+}
+.leaflet-bottom.leaflet-right,.leaflet-top.leaflet-left {
+    display: none !important;
+}
+
+/*              PHONE              */
+@media (max-width: 850px) {
+    #darwinMapContainer.desktop {
+        display: none;
+    }
+    #darwinMapContainer.mobile {
+        width: calc(100vw - 30px);
+        display: grid !important;
+        text-align: left;
+        max-height: 540px !important;
+
+        #darwinMapHeadline {
+            font-size: 30px;
+            font-weight: 700;
+        }
+        #darwinMapUnderline {
+            color: var(--black);
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 500;
+        }
+        button {
+            width: max-content;
+            height: 50px;
+            font-size: 20px;
+            text-align: left;
+
+            i {
+                position: relative;
+                top: 4px;
+            }
+        }
+        #darwinPhoneMapMenu {
+            #darwinMapHeadline {
+                font-size: 20px;
+                height: 20px;
+                display: grid;
+                grid-template-columns: repeat(2,max-content);
+                margin-bottom: 25px;
+
+                #dropDownContainer {
+                    color: var(--darkblue);
+
+                    .icon-dropdown {
+                        position: relative;
+                        top: -1px;
+                    }
+                }
+            }
+            
+            #mapToogler {
+                width: 100%;
+                height: 40px;
+                border-radius: 4px;
+                border: 3px solid var(--darkblue);
+                display: grid;
+                grid-template-columns: repeat(2,50%);
+                margin-bottom: 20px;
+
+                .mapToogleItem {
+                    width: 100%;
+                    height: 100%;
+                    color: var(--darkblue);
+                    font-weight: 700;
+                    transition: .3s ease;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+
+                    &.toogled {
+                        color: var(--white);
+                        background: var(--darkblue);
+                    }
+                }
+            }
+            .shopAdress {
+                margin-bottom: 0;
+
+                .shopAdressSpan {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+                .badge {
+                    height: 20px;
+                    font-size: 12px;
+                    border-radius: 8px;
+                }
+            }
+            .shopTime {
+                font-size: 12px;
+
+                i {
+                    top: 3px;
+                    font-size: 14px;
+                }
+            }
+            .shopContact {
+                font-size: 13px;
+            }
+            #mapShops {
+                height: max-content;
+                width: 100%;
+                max-height: 329px;
+                border-radius: 4px;
+                background: #fff;
+            }
+            #phoneMapContainer {
+                height: max-content;
+                width: 100%;
+                height: 329px;
+                border-radius: 4px;
+                background: var(--white);
+                display: grid;
+                grid-template-rows: max-content auto;
+
+                .shopItem {
+                    margin-bottom: 0;
+                    background: #fff;
+                    border-radius: 6px 6px 0 0;
+                    padding-left: 20px;
+                    padding-right: 12px;
+                    padding: 9px 12px 7px 12px;
+                }
+                #phoneDarwinMap {
+                    border-radius: 0 0 6px 6px;
+                }
+            }
+        }
+    }
+}

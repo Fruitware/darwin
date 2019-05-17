@@ -1,0 +1,66 @@
+.tabsnavigationMainContainer {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.tabsnavigationContainer {
+    margin-left: 16px;
+    height: 36px;
+    width: max-content;
+
+    .tabItem {
+        display: inline-block;
+        margin-right: 10px;
+        height: 36px;
+        padding: 0 10px;
+        border-radius: 4px;
+        transition: .3s ease;
+        cursor: pointer;
+
+        i {
+            position: relative;
+            top: 2.5px;
+            display: none;
+        }
+        h4 {
+            display: inline;
+            font-size: 20px;
+            line-height: 34px;
+            font-weight: 600;
+            color: var(--black);
+            margin: 0;
+            padding: 0;
+        }
+
+        &.tabItemActive {
+            background: var(--default);
+            
+            i {
+                display: inline;
+            }
+            h4 {
+                color: var(--white);
+            }
+        }
+    }
+}
+
+
+/*              PHONE              */
+@media (max-width: 850px) {
+    .tabsnavigationMainContainer {
+        width: 100vw;
+        overflow: hidden;
+        padding-bottom: 20px;
+        height: max-content !important;
+
+        .dcontainerchild {
+            width: 100vw;
+            overflow: auto;
+
+            .spaceForPhone {
+                width: 5px !important;
+                display: inline-block !important;
+            }
+        }
+    }
+}

@@ -27,6 +27,7 @@
             min-width: 80px;
             grid-row: span 2 / auto;
             display: grid;
+            grid-auto-flow: column;
             justify-self: right;
             justify-items: right;
             align-items: center;

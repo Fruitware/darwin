@@ -343,7 +343,13 @@
                 }
             }
             #iconsContainer {
-                grid-gap: 0;
+                grid-gap: 0 !important;
+                position: absolute;
+                left: initial;
+                right: 5px;
+                top: initial !important;
+                bottom: 6px !important;
+                height: 20px !important;
                 
                 &.noButtons {
                     grid-gap: 5px;

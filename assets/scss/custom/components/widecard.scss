@@ -14,12 +14,14 @@
         grid-template-columns: max-content auto;
 
         #leftSide {
-            align-self: end;
+            align-self: center;
             display: block;
             position: relative;
-            bottom: 80px;
-            height: max-content;
+            bottom: 0;
+            height: 350px;
             width: max-content;
+            display: grid;
+            grid-template-rows: auto max-content;
 
             span {
                 display: block;
@@ -36,11 +38,12 @@
                 font-weight: 500;
             }
             button {
+                align-self: end;
                 font-family: 'Noir Pro', sans-serif;
                 margin-top: 30px;
                 color: #f3f3f3;
                 border-width: 2px;
-                min-width: 160px;
+                min-width: 210px;
                 width: max-content;
                 padding-right: 30px;
                 padding-left: 30px;
@@ -60,11 +63,11 @@
             display: grid;
             justify-content: right;
             align-items: center;
-            grid-gap: 1vw;
+            grid-gap: 2vw;
             grid-auto-flow: column;
             grid-template-columns: repeat(auto,max-content);
 
-            @media (max-width: 1120px) {
+            @media (max-width: 1140px) {
                 #itemCardLinkContainer:nth-child(3){
                     display: none;
                 }
@@ -165,6 +168,18 @@
     }
 }
 
+@media (min-width: 850px) {
+    #widecardContainer {
+        .widecardLeft {
+            #rightSide {
+                div:nth-child(n+4){
+                    display: none !important;
+                }
+            }
+        }
+    }
+}
+
 
 
 /*              PHONE              */
@@ -196,6 +211,7 @@
             overflow: visible;
 
             #leftSide {
+                height: max-content;
                 position: initial;
                 padding-bottom: 5px;
     

@@ -3,7 +3,7 @@
     height: 510px;
     overflow: hidden;
 }
-#recomendationsContainer {
+.sliderContainer {
     position: relative;
     width: 95%;
     left: 2.5%;
@@ -60,7 +60,7 @@
         }
     }
 
-    #recomendations {
+    .slider {
         width: 100%;
         max-width: 1150px !important;
         overflow: hidden;
@@ -73,7 +73,7 @@
         justify-items: center;
         align-items: center;
         
-        #defaultItemsContainer {
+        .defaultItemsContainer {
             width: 100%;
             max-width: 1150px;
             display: grid;
@@ -85,7 +85,7 @@
                 & {
                     grid-template-columns: repeat(3,1fr);
                 }
-                #itemCardLinkContainer:nth-child(4){
+                .itemCard:nth-child(4){
                     display: none;
                 }
             }
@@ -146,26 +146,48 @@
 }
 
 @media (min-width: 850px) {
-    #defaultItemsContainer {
-        #itemHalfBannerContainer {
+    .defaultItemsContainer {
+        .bannerContainer {
             display: none;
         }
     }
 }
 
 /*              PHONE              */
+@media (min-width: 760px) and (max-width: 850px) {
+    .sliderContainer {
+        .slider {
+            .defaultItemsContainer {
+                grid-template-columns: repeat(4,1fr) !important;
+                grid-template-rows: 100% !important;
+
+                &:nth-child(2) {
+                    .itemCard:nth-child(n+2) {
+                        display: grid !important;
+                    }
+                    .bannerContainer {
+                        display: none;
+                    }
+                }
+            }
+            #dirItemContainer {
+                grid-template-columns: repeat(6,1fr) !important;
+            }
+        }
+    }
+}
 @media (max-width: 850px) {
     #slidersContainer {
         height: max-content;
     }
-    #recomendationsContainer {
+    .sliderContainer {
         width: 100vw;
         overflow: hidden;
         left: 0;
         grid-template-columns: 100vw;
         justify-items: center;
 
-        #recomendations {
+        .slider {
             width: calc(100% - 30px);
             padding: 0;
             overflow: visible;
@@ -173,7 +195,7 @@
             grid-auto-flow: row;
             grid-gap: 10px;
 
-            #defaultItemsContainer {
+            .defaultItemsContainer {
                 position: relative;
                 justify-self: center;
                 grid-template-columns: repeat(2,1fr);
@@ -183,18 +205,18 @@
                 grid-row-gap: 10px;
                 overflow: visible;
 
-                #itemCardLinkContainer:nth-child(4){
+                .itemCard:nth-child(4){
                     display: grid;
                 }
                 &:nth-child(n+3) {
                     display: none !important;
                 }
                 &:nth-child(2) {
-                    #itemCardLinkContainer:nth-child(n+2) {
-                        display: none !important;
+                    .itemCard:nth-child(n+2) {
+                        display: none;
                     }
                 }
-                #itemHalfBannerContainer {
+                .bannerContainer {
                     display: grid;
                 }
             }
@@ -231,15 +253,17 @@
     }
 }
 @media (max-width: 360px) {
-    #recomendationsContainer {
-        #itemCardLinkContainer,#imgContainer,#itemHalfBannerContainer {
+    .sliderContainer {
+        .itemCard,.imgContainer,.bannerContainer {
             width: 140px !important;
         }
-        #itemCardLinkContainer {
-            grid-gap: 1px;
+        .itemCard,.bannerContainer {
             height: 250px;
+        }
+        .itemCard {
+            grid-gap: 1px;
     
-            #underline {
+            .underline {
                 font-size: 8.5px;
             }
         }

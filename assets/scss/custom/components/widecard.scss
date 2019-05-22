@@ -1,4 +1,4 @@
-#widecardContainer {
+.wideCardContainer {
     height: 430px;
     background-color: #343434;
     background-size: cover !important;
@@ -13,7 +13,7 @@
         display: grid;
         grid-template-columns: max-content auto;
 
-        #leftSide {
+        .leftSide {
             align-self: center;
             display: block;
             position: relative;
@@ -57,7 +57,7 @@
                 }
             }
         }
-        #rightSide {
+        .rightSide {
             width: 100%;
             height: 100%;
             display: grid;
@@ -68,7 +68,7 @@
             grid-template-columns: repeat(auto,max-content);
 
             @media (max-width: 1140px) {
-                #itemCardLinkContainer:nth-child(3){
+                .itemCard:nth-child(3){
                     display: none;
                 }
             }
@@ -84,7 +84,7 @@
         grid-template-rows: 100%;
         text-align: center;
 
-        #leftSide {
+        .leftSide {
             justify-self: right;
             align-self: center;
             height: max-content;
@@ -130,7 +130,7 @@
                 }
             }
         }
-        #rightSide {
+        .rightSide {
             width: 100%;
             height: 100%;
             display: grid;
@@ -149,7 +149,7 @@
     .blackColorTheme {
         color: #231F20;
 
-        #leftSide {
+        .leftSide {
             button {
                 border-color: #231F20;
                 color: #231F20 !important;
@@ -169,10 +169,10 @@
 }
 
 @media (min-width: 850px) {
-    #widecardContainer {
+    .wideCardContainer {
         .widecardLeft {
-            #rightSide {
-                div:nth-child(n+4){
+            .rightSide {
+                div:not(.pricesGrid):nth-child(n+4){
                     display: none !important;
                 }
             }
@@ -187,7 +187,7 @@
     .spaceForPhone {
         display: block !important;
     }
-    #widecardContainer {
+    .wideCardContainer {
         height: max-content;
         width: 100vw;
         overflow: hidden;
@@ -210,7 +210,7 @@
             grid-template-rows: repeat(2, max-content);
             overflow: visible;
 
-            #leftSide {
+            .leftSide {
                 height: max-content;
                 position: initial;
                 padding-bottom: 5px;
@@ -229,7 +229,7 @@
                     line-height: 24px;
                 }
             }
-            #rightSide {
+            .rightSide {
                 position: relative;
                 left: -15px;
                 width: 100vw;
@@ -239,7 +239,7 @@
                 padding-top: 10px;
                 justify-content: left;
 
-                #itemCardLinkContainer {
+                .itemCard {
                     &:first-child {
                         margin-left: 15px;
                     }
@@ -247,7 +247,7 @@
                         margin-right: 15px;
                     }
                 }
-                #itemCardLinkContainer:nth-child(3){
+                .itemCard:nth-child(3){
                     display: grid;
                 }
             }

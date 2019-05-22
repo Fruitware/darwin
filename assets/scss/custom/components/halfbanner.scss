@@ -1,4 +1,4 @@
-#itemHalfBannerContainer {
+.bannerContainer {
     width: 255px;
     height: 400px;
     border-radius: 4px;
@@ -26,19 +26,19 @@
         box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
     }
 
-    #itemHalfBanner {
+    .banner {
         position: relative;
         bottom: 20px;
         width: 95%;
 
-        #headline {
+        .headline {
             font-weight: 500;
             font-size: 1.3rem;
             line-height: 24px;
             margin: 0;
             margin-bottom: 10px;
         }
-        #underline {
+        .underline {
             font-size: .9rem;
             line-height: 18px;
             margin: 0;
@@ -46,37 +46,37 @@
     }
 }
 
-#widecardContainer {
-    #itemHalfBannerContainer {
+.wideCardContainer {
+    .bannerContainer {
         height: 350px;
     }
 }
 
 
 @media (max-width: 850px) {
-    #widecardContainer {
-        #itemHalfBannerContainer {
+    .wideCardContainer {
+        .bannerContainer {
             height: 220px;
         }
     }
 
-    #itemHalfBannerContainer {
+    .bannerContainer {
         padding: 10px !important;
         padding-left: 12.5px;
         padding-right: 12.5px;
         width: 163px;
         height: 273px;
 
-        #itemHalfBanner {
+        .banner {
             bottom: 0;
         }
 
-        #headline {
+        .headline {
             font-size: 15px !important;
             line-height: 15px !important;
             margin-bottom: 7px !important;
         }
-        #underline {
+        .underline {
             font-size: 12px !important;
             line-height: 14px !important;
         }

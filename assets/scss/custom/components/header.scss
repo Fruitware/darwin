@@ -27,6 +27,14 @@
             grid-template-columns: repeat(3,max-content) auto repeat(3,max-content);
             grid-gap: 2vw;
 
+            .dropDown {
+                color: $white;
+
+                ul {
+                    list-style-type: none;
+                }
+            }
+
             .headerItem {
                 min-width: 100px;
                 width: max-content;
@@ -67,12 +75,11 @@
                 }
 
                 &:nth-of-type(5){
-                    width: 315px;
-                    @media (max-width: 1150px) {
-                        width: 180px;
-                    }
-                    @media (max-width: 920px) {
-                        width: 130px;
+                    width: 140px;
+
+                    .dropDown {
+                        width: max-content;
+                        max-width: 325px;
                     }
                 }
             }
@@ -80,7 +87,7 @@
                 i {
                     transition: .2s ease;
                 }
-                #dropDown {
+                .dropDown {
 
                     li {
                         width: 100%;
@@ -153,6 +160,7 @@
                 }
             }
             #inputContainer {
+                z-index: 7;
                 height: 100%;
                 max-height: 49px;
                 width: auto;
@@ -160,6 +168,8 @@
                 border-radius: 4px;
                 display: grid;
                 grid-template-columns: 60px auto;
+                grid-template-rows: 100% max-content;
+                transition: .3s ease;
 
                 .icon {
                     color: #F3F3F3;
@@ -173,7 +183,7 @@
                     outline: none;
                     border: none;
                     text-align: left;
-                    font-family: 'Noir Pro';
+                    font-family: 'Noir Pro', sans-serif;
                     font-size: 1rem;
                     color: #fff;
                     height: 100%;
@@ -183,6 +193,146 @@
                         color: #F3F3F3;
                     }
                 }
+
+
+
+                /*          Desktop Search             */
+                #desktopSearch {
+                    width: 100%;
+                    height: 357px;
+                    background: #fff;
+                    grid-column: span 2 / auto;
+                    border-radius: 0 0 4px 4px;
+                    display: grid;
+                    grid-template-columns: 180px auto;
+                    grid-gap: 12px;
+                    padding: 20px;
+                    overflow: hidden;
+
+                    .fadedHeadline {
+                        text-align: left;
+                        display: block;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 18px;
+                        color: var(--middlegray);
+                        margin-bottom: 10px;
+                    }
+                    .searchRecomendationItem {
+                        display: block;
+                        color: var(--dark);
+                        font-size: 16px;
+                        line-height: 20px;
+                        font-weight: 500;
+                        margin-bottom: 10px;
+                        cursor: pointer;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                    #searchLeftSide {
+                        overflow: auto;
+                        &::-webkit-scrollbar {
+                            width: 6px;
+                        }
+                        ::-webkit-scrollbar-track {
+                            background: #fff;
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            background: #C7C7C7;
+                            border-radius: 10px;
+                        }
+                        &::-webkit-scrollbar-thumb:hover {
+                            background: var(--gray); 
+                        }
+
+                        .leftSideBlock {
+                            margin-bottom: 18px;
+                            text-align: left;
+                        }
+                    }
+                    #searchRightSide {
+                        &::-webkit-scrollbar {
+                            width: 6px;
+                        }
+                        ::-webkit-scrollbar-track {
+                            background: #fff;
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            background: #C7C7C7;
+                            border-radius: 10px;
+                        }
+                        &::-webkit-scrollbar-thumb:hover {
+                            background: var(--gray); 
+                        }
+
+                        .desktopSearchItem {
+                            padding: 10px 20px 10px 20px;
+                            border-radius: 5px;
+                            width: 100%;
+                            min-height: 65px;
+                            display: grid;
+                            grid-template-rows: 100%;
+                            grid-template-columns: 55px auto 125px;
+                            grid-gap: 10px;
+                            text-align: left;
+                            transition: .3s ease;
+                            cursor: pointer;
+                            &:hover {
+                                background: var(--white);
+                            }
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            }
+                            .searchItemInfoBlock {
+                                height: 100%;
+                                display: grid;
+                                grid-template-columns: 100%;
+                                grid-template-rows: repeat(2,max-content);
+                                align-items: center;
+
+                                .searchItemHeadline {
+                                    color: var(--black);
+                                    font-size: 20px;
+                                    font-weight: 500;
+                                    line-height: 24px;
+                                }
+                                .colorChoose {
+                                    font-size: 14px;
+                                    line-height: 22px;
+                                    color: var(--dark);
+                                }
+                            }
+                            .searchItemPriceBlock {
+                                height: 100%;
+                                justify-self: end;
+                                display: grid;
+                                grid-template-columns: 100%;
+                                grid-template-rows: repeat(2,max-content);
+                                align-items: center;
+
+                                .mainPrice {
+                                    color: var(--black);
+                                    font-size: 20px;
+                                    font-weight: 500;
+                                    line-height: 24px;
+                                }
+                                .secondaryPrice {
+                                    color: var(--gray);
+                                    font-size: 14px;
+                                    line-height: 22px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+
             }
             #iconsBlock {
                 color: #f3f3f3;
@@ -295,6 +445,7 @@
             align-items: center;
             grid-gap: 28px;
             height: 100%;
+            color: $white;
 
             img {
                 justify-self: left;
@@ -348,7 +499,7 @@
                     outline: none;
                     border: none;
                     text-align: left;
-                    font-family: 'Noir Pro';
+                    font-family: 'Noir Pro', sans-serif;
                     font-size: 1rem;
                     color: #fff;
                     height: 100%;
@@ -456,6 +607,7 @@
                 grid-template-columns: max-content auto max-content;
                 grid-gap: 4vw;
                 align-items: center;
+                color: $white;
 
                 .headlineContainer {
                     .headline {
@@ -476,6 +628,7 @@
                 grid-template-columns: max-content auto max-content;
                 grid-gap: 4vw;
                 align-items: center;
+                color: $white;
 
                 .badge {
                     color: $white;
@@ -637,6 +790,7 @@
 
         #preSearchTab {
             padding-top: 15px;
+            text-align: left;
 
             .presearchBlock {
                 width: 100%;
@@ -659,6 +813,14 @@
                         color: $gray-900;
                     }
                 }
+            }
+            .preSearchTabHeadline {
+                display: block;
+                color: $black;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 24px;
+                margin-bottom: 20px;
             }
         }
         #mainSearchContainer {

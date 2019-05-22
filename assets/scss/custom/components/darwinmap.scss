@@ -14,7 +14,7 @@
             grid-template-columns: repeat(2,max-content);
             margin-bottom: 30px;
     
-            #dropDownContainer {
+            .dropDownContainer {
                 color: var(--darkblue);
                 cursor: pointer;
     
@@ -216,7 +216,7 @@
                 grid-template-columns: repeat(2,max-content);
                 margin-bottom: 25px;
 
-                #dropDownContainer {
+                .dropDownContainer {
                     color: var(--darkblue);
 
                     .icon-dropdown {

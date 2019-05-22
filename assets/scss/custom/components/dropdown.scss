@@ -1,11 +1,11 @@
-#dropDownContainer {
+.dropDownContainer {
     z-index: 9;
     width: max-content;
     height: max-content;
     padding-left: 8px;
     padding-right: 8px;
 
-    #mainContainer {
+    .mainContainer {
         width: 100%;
         height: max-content;
 
@@ -19,7 +19,7 @@
             }
         }
     }
-    #dropDown {
+    .dropDown {
         transform-style: preserve-3d;
         position: relative;
         left: -8px;
@@ -36,6 +36,7 @@
             height: max-content;
             padding: 0;
             margin: 0;
+            list-style-type: none;
 
             li {
                 font-size: 1rem;

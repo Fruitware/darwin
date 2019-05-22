@@ -36,6 +36,7 @@
                     font-size: 20px;
                     font-weight: 400;
                     margin-bottom: 7px;
+                    color: $white;
                 }
                 b {
                     font-weight: 600;
@@ -45,12 +46,14 @@
                 font-size: 20px;
                 font-weight: 600;
                 margin-bottom: 8px;
+                color: $white;
             }
             .footerSecondValue {
                 font-weight: 16px;
                 line-height: 20px;
                 max-width: 200px;
                 margin-bottom: 8px;
+                color: $white;
             }
         }
         #socialsBlock {
@@ -78,12 +81,12 @@
     }
     @media (min-width: 850px) {
         .footerdropdown {
-            #mainContainer {
+            .mainContainer{
                 i {
                     display: none;
                 }
             }
-            #dropDown {
+            .dropDown {
                 display: block !important;
             }
         }
@@ -146,7 +149,7 @@
                 margin-bottom: -3px !important;
             }
         }
-        #dropDownContainer {
+        .dropDownContainer {
             width: 100%;
         }
         .footerSecondHeadline {
@@ -175,7 +178,7 @@
             }
         }
     }
-    #dropDownContainer {
+    .dropDownContainer {
         padding-left: 15px;
         padding-right: 15px;
     }

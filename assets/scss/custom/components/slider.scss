@@ -6,7 +6,7 @@
 .sliderContainer {
     position: relative;
     width: 95%;
-    left: 2.5%;
+    margin: 0 auto;
     padding-bottom: 70px;
     display: grid;
     grid-template-columns: auto 1150px auto;
@@ -72,6 +72,7 @@
         padding-right: 0;
         justify-items: center;
         align-items: center;
+        transition: .8s ease;
         
         .defaultItemsContainer {
             width: 100%;

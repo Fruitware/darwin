@@ -22,35 +22,23 @@
 
 <p>Within the download you’ll find the following directories and files:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-darwin/
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>darwin/
+├── CHANGELOG.md
 ├── LICENSE.md
 ├── README.md
 ├── assets/
-  ├── css/
-  │   ├── darwin.css
-  │   ├── darwin.css.map
   └── js/
   │   ├── darwin.js
   │   └── darwin.min.js
-  └── fonts/
-  │   ├── noirpro/
-  │   ├── icons/
-  │   └── fonts.css
   └── scss/
   │   ├── bootstrap/
   │   ├── custom/
   │   ├── darwin.scss
   │   ├── darwinstyling.scss
   └── vendor/
-  │   ├── bootstrap/
-  │   ├── bootstrap-datepicker/
-  │   ├── jquery/
-  │   ├── onscreen/
-  │   ├── popper/
-  └── vue/
-      ├── dropdown.vue
-      ├── localheader.vue
-      ├── slider.vue
-      ├── carousel.vue
+      ├── bootstrap/
+      ├── bootstrap-datepicker/
+      ├── jquery/
+      ├── popper/
+
 </code></pre></div></div>

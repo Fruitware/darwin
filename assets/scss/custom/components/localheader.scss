@@ -1,4 +1,4 @@
-#localHeaderContainer {
+.localHeaderContainer {
     display: flex;
     width: 100%;
     height: max-content;
@@ -7,10 +7,9 @@
     align-items: center;
     text-align: left;
 
-    #localHeader {
+    .localHeader {
         display: grid;
-        min-width: max-content;
-        width: 95%;
+        width: max-content;
         max-width: 1155px;
         height: 65%;
         align-items: center;
@@ -18,6 +17,7 @@
         color: #000;
         font-size: 1rem;
         overflow: visible;
+        grid-auto-flow: column;
 
         &.gridcolumns1{grid-template-columns: repeat(1,max-content)}
         &.gridcolumns2{grid-template-columns: repeat(2,max-content)}
@@ -30,9 +30,7 @@
         &.gridcolumns9{grid-template-columns: repeat(9,max-content)}
         &.gridcolumns10{grid-template-columns: repeat(10,max-content)}
 
-        #phoneCategories {
-            display: none;
-        }
+        
 
         .localHeaderItem {
             width: 100%;
@@ -49,7 +47,7 @@
                 background: var(--black);
                 .localHeaderItemHeadlineContainer {
                     color: var(--white) !important;
-                    h3 {
+                    span {
                         color: var(--white) !important;
                     }
                 }
@@ -65,7 +63,7 @@
                 color: var(--black);
                 font-size: 1rem;
 
-                h3 {
+                span {
                     font-size: 1rem;
                     display: inline;
                     margin: 0;
@@ -134,6 +132,67 @@
                     font-size: 1rem;
                     margin-bottom: 5px;
                     font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 850px){
+    .phoneCategories {
+        display: none !important;
+    }
+}
+@media (max-width: 850px){
+    .localHeaderContainer {
+        width: 100vw;
+        height: 100%;
+        overflow-x: hidden !important;
+        background: $black;
+        justify-self: left;
+
+        .localHeader {
+            display: flex;
+            flex: 1;
+            width: max-content;
+            height: 100%;
+            overflow: auto;
+            justify-items: baseline;
+            align-items: center;
+            grid-gap: 25px;
+            color: $white;
+            max-width: none !important;
+            min-width: auto !important;
+
+            .phoneCategories {
+                display: grid;
+            }
+
+            .localHeaderItem {
+                display: inline-block;
+                width: max-content;
+                height: 30px;
+                max-width: none;
+                word-break: keep-all;
+                white-space: nowrap;
+                padding-right: 20px;
+
+                &:first-child {
+                    padding-left: 15px;
+                }
+                &:last-child {
+                    padding-right: 15px;
+                }
+
+                .localHeaderItemHeadlineContainer {
+                    color: $white;
+
+                    h3 {
+                        color: $white;
+                    }
+                }
+                .localHeaderCategoryInfo{
+                    display: none !important;
                 }
             }
         }

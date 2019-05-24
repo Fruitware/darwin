@@ -63,7 +63,7 @@
             object-fit: contain;
         }
 
-        #colorChoose {
+        .colorChoose {
             z-index: 9;
             position: relative;
             height: max-content;
@@ -109,7 +109,7 @@
             }
         }
     }
-    #buttonsGrid {
+    .buttonsGrid {
         display: grid;
         grid-template-columns: repeat(2,1fr);
         align-items: center;
@@ -279,7 +279,7 @@
             left: -10px;
             width: 163px;
         }
-        #buttonsGrid {
+        .buttonsGrid {
             grid-gap: 15px;
 
             button {

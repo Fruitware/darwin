@@ -56,7 +56,7 @@
                 color: $white;
             }
         }
-        #socialsBlock {
+        .socialsBlock {
             display: block;
             margin-top: 22px;
             display: grid;
@@ -94,7 +94,7 @@
         .darwinGrid { grid-area: secondColumn; }
         .servicesGrid { grid-area: thirdColumn; }
         .clientsGrid { grid-area: fourthColumn; }
-        #socialsBlock.mobile {
+        .socialsBlock.mobile {
             display: none !important;
         }
     }
@@ -168,7 +168,7 @@
                 }
             }
         }
-        #socialsBlock {
+        .socialsBlock {
             padding-left: 5px;
             margin-top: 0 !important;
             justify-items: start !important;

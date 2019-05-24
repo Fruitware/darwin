@@ -1,9 +1,9 @@
 <template>
-    <div id="localHeaderContainer" v-if="tabs.length>0">
-        <div id="localHeader" :class="'gridcolumns'+tabs.length">
-            <div class="localHeaderItem" @click="$emit('openmenu')" id="phoneCategories"><span class="localHeaderItemHeadlineContainer"><i class="icon icon-menu" alt="Все категории" title="Все категории"></i><h3>Все категории</h3></span></div>
+    <div class="localHeaderContainer" v-if="tabs.length>0">
+        <div class="localHeader" :class="'gridcolumns'+tabs.length">
+            <div class="localHeaderItem phoneCategories" @click="$emit('openmenu')"><span class="localHeaderItemHeadlineContainer"><i class="icon icon-menu" title="Все категории"></i><span>Все категории</span></span></div>
             <div class="localHeaderItem" v-for="(item,index) in tabs">
-                <span class="localHeaderItemHeadlineContainer"><i class="icon" :class="'icon-'+categoriesDB[item].ico" :alt="categoriesDB[item].headline" :title="categoriesDB[item].headline"></i><h3>{{categoriesDB[item].headline}}</h3></span>
+                <span class="localHeaderItemHeadlineContainer"><i class="icon" :class="'icon-'+categoriesDB[item].ico" :title="categoriesDB[item].headline"></i><span>{{categoriesDB[item].headline}}</span></span>
                 <div class="localHeaderCategoryInfo defaultShadow" :class="{firstLocalHeaderItem: index==0 && tabs.length>=5, lastLocalHeaderItem: index==(tabs.length-1) && tabs.length>=5}">
                     <div>
                         <span class="localHeaderInfoHeadline"><i class="icon icon-cup"></i> Бренды</span>

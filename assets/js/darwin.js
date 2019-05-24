@@ -1,6 +1,117 @@
-
 "use strict";
-$(document).ready(function() {
+$(document).ready(function () {
+
+    //Dropdown
+    for (let item of $('.dropDownContainer')) {
+        let root = $(item);
+        let data = root.attr('data');
+        let icon = root.find('.mainContainer').find('i');
+        let dropdown = root.find('.dropDown');
+        let enabled = false;
+
+        if (data.includes('phoneOnly')) {
+            if (document.documentElement.clientWidth <= 850) {
+                dropdown.css({
+                    display: 'none'
+                });
+            } else {
+                dropdown.css({
+                    display: 'block'
+                });
+            }
+        } else {
+            dropdown.css({
+                display: 'none'
+            });
+        }
+
+        if (data.includes('closeOnClick')) {
+            root.find('.dropDown').bind('mousedown', function () {
+                if (data.includes('phoneOnly')) {
+                    if (document.documentElement.clientWidth <= 850) {
+                        enabled = !enabled;
+                        updateState();
+                    }
+                } else {
+                    enabled = !enabled;
+                    updateState();
+                }
+            });
+        }
+
+        root.find('.mainContainer').bind('mousedown', function () {
+            if (data.includes('phoneOnly')) {
+                if (document.documentElement.clientWidth <= 850) {
+                    enabled = !enabled;
+                    updateState();
+                }
+            } else {
+                enabled = !enabled;
+                updateState();
+            }
+        });
+
+        function updateState() {
+            if (enabled) {
+                icon.addClass('dropdownActive');
+                dropdown.css({
+                    display: 'block'
+                });
+            } else {
+                icon.removeClass('dropdownActive');
+                dropdown.css({
+                    display: 'none'
+                });
+            }
+        }
+    }
+
+    // Slider
+    for (let item of $('.sliderContainer')) {
+        let root = $(item);
+        let scrollItems = root.find('.slider').find('.itemToScroll');
+        let arrows = root.find('.arrowContainer').children();
+        let scrollNum = 0;
+        let scrollAvailable = true;
+        root.find('.slider').css({
+            gridTemplateColumns: `repeat(${scrollItems.length},100%)`
+        });
+        if (scrollItems.length <= 1) {
+            arrows.css({
+                display: 'none'
+            });
+        }
+        arrows.bind('mousedown', function () {
+            if (scrollAvailable == true) {
+                let index = $(this).parent().index();
+                if (index == 0) {
+                    scroll('left')
+                } else {
+                    scroll('right')
+                }
+            }
+
+            function scroll(direction) {
+                scrollAvailable = false;
+                if (direction == 'right' && scrollNum < scrollItems.length - 1) {
+                    scrollNum++;
+                } else if (direction == 'right' && scrollNum >= scrollItems.length - 1) {
+                    scrollNum = 0;
+                }
+                if (direction == 'left' && scrollNum > 0) {
+                    scrollNum--;
+                } else if (direction == 'left' && scrollNum <= 0) {
+                    scrollNum++;
+                }
+                root.find('.slider').animate({
+                    scrollLeft: $(scrollItems[scrollNum]).position().left
+                }, 800);
+                setTimeout(function () {
+                    scrollAvailable = true
+                }.bind(this), 850);
+            }
+        });
+    }
 
     // Collapse navigation
     $('.navbar-main .collapse').on('hide.bs.collapse', function () {
@@ -18,26 +129,14 @@ $(document).ready(function() {
 
         $this.addClass('close');
 
-        setTimeout(function(){
+        setTimeout(function () {
             $this.removeClass('close');
         }, 200);
 
     });
 
-    // Headroom - show/hide navbar on scroll
-    if($('.headroom')[0]) {
-        var headroom  = new Headroom(document.querySelector("#navbar-main"), {
-            offset: 300,
-            tolerance : {
-                up : 30,
-                down : 30
-            },
-        });
-        headroom.init();
-    }
-    
     // Datepicker
-    $('.datepicker')[0] && $('.datepicker').each(function() {
+    $('.datepicker')[0] && $('.datepicker').each(function () {
         $('.datepicker').datepicker({
             disableTouchKeyboard: true,
             autoclose: false
@@ -48,99 +147,19 @@ $(document).ready(function() {
     $('[data-toggle="tooltip"]').tooltip();
 
     // Popover
-    $('[data-toggle="popover"]').each(function() {
+    $('[data-toggle="popover"]').each(function () {
         var popoverClass = '';
-        if($(this).data('color')) {
-            popoverClass = 'popover-'+$(this).data('color');
+        if ($(this).data('color')) {
+            popoverClass = 'popover-' + $(this).data('color');
         }
         $(this).popover({
             trigger: 'focus',
-            template: '<div class="popover '+ popoverClass +'" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+            template: '<div class="popover ' + popoverClass + '" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
         })
     });
-    
+
     // Additional .focus class on form-groups
-    $('.form-control').on('focus blur', function(e) {
+    $('.form-control').on('focus blur', function (e) {
         $(this).parents('.form-group').toggleClass('focused', (e.type === 'focus' || this.value.length > 0));
-    }).trigger('blur');    
-    
-    // NoUI Slider
-    if ($(".input-slider-container")[0]) {
-        $('.input-slider-container').each(function() {
-
-            var slider = $(this).find('.input-slider');
-            var sliderId = slider.attr('id');
-            var minValue = slider.data('range-value-min');
-            var maxValue = slider.data('range-value-max');
-
-            var sliderValue = $(this).find('.range-slider-value');
-            var sliderValueId = sliderValue.attr('id');
-            var startValue = sliderValue.data('range-value-low');
-
-            var c = document.getElementById(sliderId),
-                d = document.getElementById(sliderValueId);
-
-            noUiSlider.create(c, {
-                start: [parseInt(startValue)],
-                connect: [true, false],
-                //step: 1000,
-                range: {
-                    'min': [parseInt(minValue)],
-                    'max': [parseInt(maxValue)]
-                }
-            });
-
-            c.noUiSlider.on('update', function(a, b) {
-                d.textContent = a[b];
-            });
-        })
-    }
-
-    if ($("#input-slider-range")[0]) {
-        var c = document.getElementById("input-slider-range"),
-            d = document.getElementById("input-slider-range-value-low"),
-            e = document.getElementById("input-slider-range-value-high"),
-            f = [d, e];
-
-        noUiSlider.create(c, {
-            start: [parseInt(d.getAttribute('data-range-value-low')), parseInt(e.getAttribute('data-range-value-high'))],
-            connect: !0,
-            range: {
-                min: parseInt(c.getAttribute('data-range-value-min')),
-                max: parseInt(c.getAttribute('data-range-value-max'))
-            }
-        }), c.noUiSlider.on("update", function(a, b) {
-            f[b].textContent = a[b]
-        })
-    }
-
-
-    // When in viewport
-    $('[data-toggle="on-screen"]')[0] && $('[data-toggle="on-screen"]').onScreen({
-        container: window,
-        direction: 'vertical',
-        doIn: function() {
-            //alert();
-        },
-        doOut: function() {
-            // Do something to the matched elements as they get off scren
-        },
-        tolerance: 200,
-        throttle: 50,
-        toggleClass: 'on-screen',
-        debug: false
-    });
-
-    // Scroll to anchor with scroll animation
-    $('[data-toggle="scroll"]').on('click', function(event) {
-        var hash = $(this).attr('href');
-        var offset = $(this).data('offset') ? $(this).data('offset') : 0;
-
-        // Animate scroll to the selected section
-        $('html, body').stop(true, true).animate({
-            scrollTop: $(hash).offset().top - offset
-        }, 600);
-
-        event.preventDefault();
-    });
- });   
+    }).trigger('blur');
+});

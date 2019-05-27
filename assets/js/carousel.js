@@ -12,10 +12,34 @@ class Carousel {
         this.slidesContainer = this.root.find('.slidesContainer');
         this.totalSlides = this.root.find('.carouselSlide').length;
         this.slidesContainer.css({gridTemplateColumns:`repeat(${this.totalSlides},100%)`});
+        this.touchStartX = 0;
+        this.touchEndX = 0;
+
+        /* this.slidesContainer.bind('swipe', function(){
+            console.log(1);
+        }); */
+        this.root.on("touchstart",function(e){
+            this.touchStartX = e.touches[0].clientX;
+        }.bind(this));
+        this.root.on("touchend",function(e){
+            this.touchEndX = e.changedTouches[0].clientX;
+            if(this.touchStartX>this.touchEndX){
+                this.nextImage();
+            }
+            else {
+                if((this.index-1)!=-1){
+                    this.slideTo(this.index-1);
+                    clearInterval(this.autoplayInterval);
+                    this.autoplayInterval = setInterval(function(){this.nextImage()}.bind(this),this.delay);
+                }
+            }
+            this.updatePagination();
+        }.bind(this));
 
         if(this.autoplay==true){
             this.autoplayInterval = setInterval(function(){this.nextImage()}.bind(this),this.delay);
         }
+
 
         if(this.pagination==true){
             this.createPagination();

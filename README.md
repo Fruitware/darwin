@@ -30,10 +30,13 @@
   └── js/
   │   ├── darwin.js
   │   └── darwin.min.js
+  │   └── header.js
+  │   └── carousel.js
   └── scss/
   │   ├── bootstrap/
   │   ├── custom/
   │   ├── darwin.scss
+  │   ├── darwinfull.scss
   │   ├── darwinstyling.scss
   └── vendor/
       ├── bootstrap/

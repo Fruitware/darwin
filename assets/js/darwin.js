@@ -9,23 +9,9 @@ $(document).ready(function () {
         let dropdown = root.find('.dropDown');
         let enabled = false;
 
-        if (data.includes('phoneOnly')) {
-            if (document.documentElement.clientWidth <= 850) {
-                dropdown.css({
-                    display: 'none'
-                });
-            } else {
-                dropdown.css({
-                    display: 'block'
-                });
-            }
-        } else {
-            dropdown.css({
-                display: 'none'
-            });
-        }
+        dropdown.css({display:'none'});
 
-        if (data.includes('closeOnClick')) {
+        if (data!=undefined && data.includes('closeOnClick')) {
             root.find('.dropDown').bind('mousedown', function () {
                 if (data.includes('phoneOnly')) {
                     if (document.documentElement.clientWidth <= 850) {
@@ -40,7 +26,7 @@ $(document).ready(function () {
         }
 
         root.find('.mainContainer').bind('mousedown', function () {
-            if (data.includes('phoneOnly')) {
+            if (data!=undefined && data.includes('phoneOnly')) {
                 if (document.documentElement.clientWidth <= 850) {
                     enabled = !enabled;
                     updateState();
@@ -162,4 +148,5 @@ $(document).ready(function () {
     $('.form-control').on('focus blur', function (e) {
         $(this).parents('.form-group').toggleClass('focused', (e.type === 'focus' || this.value.length > 0));
     }).trigger('blur');
+
 });

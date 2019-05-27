@@ -22,8 +22,8 @@
 
 <p>Within the download you’ll find the following directories and files:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>darwin/
-├── CHANGELOG.md
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+darwin/
 ├── LICENSE.md
 ├── README.md
 ├── assets/

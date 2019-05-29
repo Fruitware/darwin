@@ -5,8 +5,11 @@
         color: #FFF;
     }
 
-    &:not(.badge-outline):not(.badge-secondary):not(.badge-white){
+    &:not(.badge-outline):not(.badge-white){
         color: #FFF;
+    }
+    &.badge-lg {
+        padding: $badge-lg-padding-y $badge-lg-padding-x;
     }
 }
 .badge-outline {
@@ -57,7 +60,7 @@
 
 // Color variations
 
-.badge-secondary {
+.badge-white {
     color: $gray-800;
 }
 
@@ -71,5 +74,46 @@
         &:not(:last-child) {
             margin-right: .5rem;
         }
+    }
+}
+
+[class^="icon-badge"], [class*=" icon-badge"] {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    &:after {
+        content: '';
+        display: block;
+        position: relative;
+        background: $yellow;
+        width: 6px;
+        height: 6px;
+        top: -29px;
+        left: 19px;
+        border-radius: 50%;
+        border: 4px solid $white;
+        box-sizing: content-box;
+    }
+
+    &.icon-badge-white {
+        &:after {
+            border-color: $white;
+        }
+        i {
+            color: $default;
+        }
+    }
+    &.icon-badge-black {
+        &:after {
+            border-color: $default;
+        }
+        i {
+            color: $white;
+        }
+    }
+
+    i {
+        font-size: 24px;
+        line-height: 24px;
     }
 }

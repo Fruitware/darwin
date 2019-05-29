@@ -44,11 +44,11 @@
             transition: .3s ease;
             cursor: pointer;
             &:hover {
-                background: var(--black);
+                background: $default;
                 .localHeaderItemHeadlineContainer {
-                    color: var(--white) !important;
+                    color: $white !important;
                     span {
-                        color: var(--white) !important;
+                        color: $white !important;
                     }
                 }
                 .localHeaderCategoryInfo {
@@ -60,7 +60,7 @@
                 max-width: 14vw;
             }
             .localHeaderItemHeadlineContainer {
-                color: var(--black);
+                color: $default;
                 font-size: 1rem;
 
                 span {
@@ -70,10 +70,11 @@
                     font-weight: 600;
                 }
                 .icon {
-                    position: relative;
-                    top: 5px;
-                    margin-right: 8px;
-                    font-size: 1.3rem;
+                    display: inline-block;
+                    margin-top: -5px;
+                    top: 3px;
+                    margin-right: 3px;
+                    font-size: 24px;
                 }
             }
             .localHeaderCategoryInfo {
@@ -91,7 +92,7 @@
                 grid-template-columns: repeat(2,1fr);
                 grid-gap: 10px;
                 text-align: left;
-                color: var(--black);
+                color: $default;
                 cursor: default;
                 &.firstLocalHeaderItem {
                     justify-self: left;
@@ -112,10 +113,10 @@
                     font-weight: 600;
 
                     i {
-                        font-size: 18px;
+                        font-size: 24px;
                         position: relative;
                         top: 3px;
-                        margin-right: 3px;
+                        margin-left: -6px;
                     }
                 }
                 .localHeaderInfoItem {
@@ -148,7 +149,7 @@
         width: 100vw;
         height: 100%;
         overflow-x: hidden !important;
-        background: $black;
+        background: $default;
         justify-self: left;
 
         .localHeader {

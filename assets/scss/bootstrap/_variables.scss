@@ -493,7 +493,7 @@ $custom-control-indicator-active-bg:            lighten($component-active-bg, 35
 $custom-control-indicator-active-box-shadow:    none !default;
 
 $custom-checkbox-indicator-border-radius:       $border-radius !default;
-$custom-checkbox-indicator-icon-checked:        str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"), "#", "%23") !default;
+$custom-checkbox-indicator-icon-checked:        url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDEyIDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik01LjQzMTkyIDguMzk4NDVDNC44ODc4NiA4LjkzMzYgNC4wMDUwOCA4LjkzMzYgMy40NjEyOCA4LjM5ODQ1TDAuNDA4MDQ0IDUuMzk1MjJDLTAuMTM2MDE1IDQuODYwMzIgLTAuMTM2MDE1IDMuOTkyIDAuNDA4MDQ0IDMuNDU3MTFDMC45NTE4MzkgMi45MjE5NiAxLjgzNDYyIDIuOTIxOTYgMi4zNzg2OCAzLjQ1NzExTDQuMTk3ODEgNS4yNDYxOUM0LjMzNTEzIDUuMzgxMDEgNC41NTgwNiA1LjM4MTAxIDQuNjk1NjUgNS4yNDYxOUw5LjYyMTMyIDAuNDAxMTc5QzEwLjE2NTEgLTAuMTMzOTcgMTEuMDQ3OSAtMC4xMzM5NyAxMS41OTIgMC40MDExNzlDMTEuODUzMiAwLjY1ODE2NCAxMiAxLjAwNjg0IDEyIDEuMzcwMjNDMTIgMS43MzM2MyAxMS44NTMyIDIuMDgyMyAxMS41OTIgMi4zMzkyOUw1LjQzMTkyIDguMzk4NDVaIiBmaWxsPSIjRjNGM0YzIi8+PC9zdmc+) !default;
 
 $custom-checkbox-indicator-indeterminate-bg:          $component-active-bg !default;
 $custom-checkbox-indicator-indeterminate-color:       $custom-control-indicator-checked-color !default;

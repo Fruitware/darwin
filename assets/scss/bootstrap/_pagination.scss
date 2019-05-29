@@ -53,7 +53,8 @@
     z-index: 1;
     color: $pagination-active-color;
     background-color: $pagination-active-bg;
-    border-color: $pagination-active-border-color;
+    border-color: darken($pagination-active-bg, 10%);
+    background-color: darken($pagination-active-bg, 10%);
   }
 
   &.disabled .page-link {
@@ -63,6 +64,7 @@
     cursor: auto;
     background-color: $pagination-disabled-bg;
     border-color: $pagination-disabled-border-color;
+    box-shadow: none;
   }
 }
 

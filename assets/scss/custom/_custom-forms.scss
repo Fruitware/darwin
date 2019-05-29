@@ -1,4 +1,5 @@
 .custom-control-label {
+    line-height: 1.8;
     // Background-color and (when enabled) gradient
     &::before {
         border: $custom-control-indicator-border-width solid $custom-control-indicator-border-color;
@@ -55,7 +56,7 @@
 .custom-checkbox {
     .custom-control-input~.custom-control-label {
         cursor: pointer;
-        color: $black;
+        color: $default;
         font-size: $font-size-sm;
     }
 
@@ -100,7 +101,7 @@
 // Radios
 .custom-radio {
     .custom-control-input~.custom-control-label {
-        color: $black;
+        color: $default;
         cursor: pointer;
         font-size: $font-size-sm;
     }

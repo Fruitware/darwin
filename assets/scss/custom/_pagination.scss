@@ -1,3 +1,73 @@
+.page-link {
+    position: relative;
+    display: block;
+    padding: $pagination-padding-y $pagination-padding-x;
+    line-height: $pagination-line-height;
+    color: $pagination-color;
+    background-color: $pagination-bg;
+    border: $pagination-border-width solid $pagination-border-color;
+    box-shadow: $pagination-box-shadow;
+    font-weight: 600;
+
+    &:hover {
+        z-index: 2;
+        color: $pagination-hover-color;
+        text-decoration: none;
+        background-color: $pagination-hover-bg;
+        border-color: $pagination-hover-border-color;
+    }
+
+    &:focus {
+        z-index: 2;
+        outline: $pagination-focus-outline;
+        box-shadow: $pagination-focus-box-shadow;
+    }
+}
+
+.page-item {
+    margin-left: $pagination-gap;
+
+    .morepages {
+        position: relative;
+        display: block;
+        padding: $pagination-padding-y $pagination-padding-x;
+        line-height: 1;
+        color: $gray-600 !important;
+        font-weight: 500;
+    }
+    &:first-child {
+        margin-left: 0;
+        .page-link {
+            margin-left: 0;
+            @include border-left-radius($border-radius);
+        }
+    }
+
+    &:last-child {
+        .page-link {
+            @include border-right-radius($border-radius);
+        }
+    }
+
+    &.active .page-link {
+        z-index: 1;
+        color: $pagination-active-color;
+        background-color: $pagination-active-bg;
+        border-color: darken($pagination-active-bg, 10%);
+        background-color: darken($pagination-active-bg, 10%);
+    }
+
+    &.disabled .page-link {
+        color: $pagination-disabled-color;
+        pointer-events: none;
+        // Opinionated: remove the "hand" cursor set previously for .page-link
+        cursor: auto;
+        background-color: $pagination-disabled-bg;
+        border-color: $pagination-disabled-border-color;
+        box-shadow: none;
+    }
+}
+
 .page-item {
     &.active .page-link {
         box-shadow: $pagination-active-box-shadow;
@@ -12,13 +82,14 @@
         margin: 0 3px;
         border-radius: 50% !important;
         width: 36px;
-		height: 36px;
-		font-size: $font-size-sm;
+        height: 36px;
+        font-size: $font-size-sm;
     }
 }
 
 .pagination-lg {
     .page-item {
+
         .page-link,
         span {
             width: 46px;
@@ -30,6 +101,7 @@
 
 .pagination-sm {
     .page-item {
+
         .page-link,
         span {
             width: 30px;

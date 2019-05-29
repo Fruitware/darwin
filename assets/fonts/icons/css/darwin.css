@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?72559871');
+  src: url('../font/fontello.eot?72559871#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?72559871') format('woff2'),
+       url('../font/fontello.woff?72559871') format('woff'),
+       url('../font/fontello.ttf?72559871') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?72559871#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-menu:before { content: '\e800'; } /* '' */
+.icon-tablet:before { content: '\e801'; } /* '' */
+.icon-time:before { content: '\e802'; } /* '' */
+.icon-monitor:before { content: '\e803'; } /* '' */
+.icon-navigation:before { content: '\e804'; } /* '' */
+.icon-notebook:before { content: '\e805'; } /* '' */
+.icon-odnoklassniki:before { content: '\e806'; } /* '' */
+.icon-paycard:before { content: '\e807'; } /* '' */
+.icon-route:before { content: '\e808'; } /* '' */
+.icon-search:before { content: '\e809'; } /* '' */
+.icon-shortarrowleft:before { content: '\e80a'; } /* '' */
+.icon-shortarrowright:before { content: '\e80b'; } /* '' */
+.icon-smartphone:before { content: '\e80c'; } /* '' */
+.icon-sound:before { content: '\e80d'; } /* '' */
+.icon-tag:before { content: '\e80e'; } /* '' */
+.icon-truck:before { content: '\e80f'; } /* '' */
+.icon-user:before { content: '\e810'; } /* '' */
+.icon-vk:before { content: '\e811'; } /* '' */
+.icon-watch:before { content: '\e812'; } /* '' */
+.icon-youtube:before { content: '\e813'; } /* '' */
+.icon-play:before { content: '\e814'; } /* '' */
+.icon-arrowleft:before { content: '\e815'; } /* '' */
+.icon-arrowright:before { content: '\e816'; } /* '' */
+.icon-bag:before { content: '\e817'; } /* '' */
+.icon-basket:before { content: '\e818'; } /* '' */
+.icon-calendar:before { content: '\e819'; } /* '' */
+.icon-phonecall:before { content: '\e81a'; } /* '' */
+.icon-cart:before { content: '\e81b'; } /* '' */
+.icon-close:before { content: '\e81c'; } /* '' */
+.icon-compare:before { content: '\e81d'; } /* '' */
+.icon-coupon:before { content: '\e81e'; } /* '' */
+.icon-cup:before { content: '\e81f'; } /* '' */
+.icon-discount:before { content: '\e820'; } /* '' */
+.icon-dropdown:before { content: '\e821'; } /* '' */
+.icon-edit:before { content: '\e822'; } /* '' */
+.icon-eye:before { content: '\e823'; } /* '' */
+.icon-facebook:before { content: '\e824'; } /* '' */
+.icon-filter:before { content: '\e825'; } /* '' */
+.icon-gadget:before { content: '\e826'; } /* '' */
+.icon-gift:before { content: '\e827'; } /* '' */
+.icon-gps:before { content: '\e828'; } /* '' */
+.icon-gpsforward:before { content: '\e829'; } /* '' */
+.icon-heart:before { content: '\e82a'; } /* '' */
+.icon-instagram:before { content: '\e82b'; } /* '' */
+.icon-iphone:before { content: '\e82c'; } /* '' */
+.icon-iqos:before { content: '\e82d'; } /* '' */
+.icon-lightning:before { content: '\e82e'; } /* '' */
+.icon-like:before { content: '\e82f'; } /* '' */

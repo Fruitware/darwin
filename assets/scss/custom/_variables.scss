@@ -24,6 +24,7 @@ $gray-800: #32325d !default;   // Line heading color
 $gray-900: #595959 !default;
 $black:    #231F20 !default;
 
+
 $grays: () !default;
 $grays: map-merge((
   "100": $gray-100,
@@ -79,9 +80,9 @@ $colors: map-merge((
   "lighter":    $gray-200
 ), $colors);
 
-$default:       #5E50A1 !default;
-$primary:       #D92B8A !default;
-$secondary:     #F3F3F3 !default;
+$default:       #231F20 !default;
+$primary:       #5E50A1 !default;
+$secondary:     #007DC5 !default;
 $success:       #72BF44 !default;
 $info:          #00B9F2 !default;
 $warning:       #F37021 !default;
@@ -242,7 +243,7 @@ $section-colors: map-merge((
 
 // Links
 
-$link-color:                $primary !default;
+$link-color:                $secondary !default;
 $link-decoration:           none !default;
 $link-hover-color:          darken($link-color, 15%);
 $link-hover-decoration:     none !default;
@@ -425,7 +426,7 @@ $hr-margin-y:                 $spacer * 2 !default;
 
 // Icons
 
-$icon-size: 3rem !default;
+$icon-size: 24px !default;
 $icon-size-xl: 5rem !default;
 $icon-size-lg: 4rem !default;
 $icon-size-sm: 2rem !default;
@@ -456,8 +457,8 @@ $table-dark-color:            $body-bg !default;
 
 // Buttons + Forms
 
-$input-btn-padding-y:         .441rem !default;
-$input-btn-padding-x:         .45rem !default;
+$input-btn-padding-y:         .38rem !default;
+$input-btn-padding-x:         .575rem !default;
 $input-btn-line-height:       $shape-height-base !default;
 
 $input-btn-focus-width:       0 !default;
@@ -479,6 +480,9 @@ $input-btn-font-size-sm:      .75rem !default;
 $input-btn-font-size:         1rem !default;
 $input-btn-font-size-lg:         1.25rem !default;
 
+$custom-radio-indicator-icon-checked:           url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDEyIDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik01LjQzMTkyIDguMzk4NDVDNC44ODc4NiA4LjkzMzYgNC4wMDUwOCA4LjkzMzYgMy40NjEyOCA4LjM5ODQ1TDAuNDA4MDQ0IDUuMzk1MjJDLTAuMTM2MDE1IDQuODYwMzIgLTAuMTM2MDE1IDMuOTkyIDAuNDA4MDQ0IDMuNDU3MTFDMC45NTE4MzkgMi45MjE5NiAxLjgzNDYyIDIuOTIxOTYgMi4zNzg2OCAzLjQ1NzExTDQuMTk3ODEgNS4yNDYxOUM0LjMzNTEzIDUuMzgxMDEgNC41NTgwNiA1LjM4MTAxIDQuNjk1NjUgNS4yNDYxOUw5LjYyMTMyIDAuNDAxMTc5QzEwLjE2NTEgLTAuMTMzOTcgMTEuMDQ3OSAtMC4xMzM5NyAxMS41OTIgMC40MDExNzlDMTEuODUzMiAwLjY1ODE2NCAxMiAxLjAwNjg0IDEyIDEuMzcwMjNDMTIgMS43MzM2MyAxMS44NTMyIDIuMDgyMyAxMS41OTIgMi4zMzkyOUw1LjQzMTkyIDguMzk4NDVaIiBmaWxsPSIjRjNGM0YzIi8+PC9zdmc+) !default;
+$custom-checkbox-indicator-icon-checked:        url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDEyIDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik01LjQzMTkyIDguMzk4NDVDNC44ODc4NiA4LjkzMzYgNC4wMDUwOCA4LjkzMzYgMy40NjEyOCA4LjM5ODQ1TDAuNDA4MDQ0IDUuMzk1MjJDLTAuMTM2MDE1IDQuODYwMzIgLTAuMTM2MDE1IDMuOTkyIDAuNDA4MDQ0IDMuNDU3MTFDMC45NTE4MzkgMi45MjE5NiAxLjgzNDYyIDIuOTIxOTYgMi4zNzg2OCAzLjQ1NzExTDQuMTk3ODEgNS4yNDYxOUM0LjMzNTEzIDUuMzgxMDEgNC41NTgwNiA1LjM4MTAxIDQuNjk1NjUgNS4yNDYxOUw5LjYyMTMyIDAuNDAxMTc5QzEwLjE2NTEgLTAuMTMzOTcgMTEuMDQ3OSAtMC4xMzM5NyAxMS41OTIgMC40MDExNzlDMTEuODUzMiAwLjY1ODE2NCAxMiAxLjAwNjg0IDEyIDEuMzcwMjNDMTIgMS43MzM2MyAxMS44NTMyIDIuMDgyMyAxMS41OTIgMi4zMzkyOUw1LjQzMTkyIDguMzk4NDVaIiBmaWxsPSIjRjNGM0YzIi8+PC9zdmc+) !default;
+
 // Buttons
 
 $btn-padding-y:               $input-btn-padding-y !default;
@@ -498,7 +502,7 @@ $btn-border-width:            $input-btn-border-width !default;
 $btn-font-weight:             600 !default;
 $btn-text-transform:          inherit !default;
 $btn-letter-spacing:          .025em !default;
-$btn-box-shadow:              0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+$btn-box-shadow:              none;
 $btn-hover-box-shadow:        0px 10px 20px rgba(0, 0, 0, 0.15);
 $btn-focus-box-shadow:        $btn-hover-box-shadow !default;
 $btn-focus-width:             $input-btn-focus-width !default;
@@ -540,14 +544,15 @@ $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      none !default; // 0 1px 3px 0 $gray-400 !default;
 
 $input-focus-bg:                        $white !default;
-$input-focus-border-color:              $darkblue;
+$input-focus-border-color:              $secondary;
 $input-focus-color:                     $input-color !default;
 $input-focus-width:                     0 !default;
 $input-focus-box-shadow:                none !default; //0 1px 3px 0 $gray-500 !default;
 
-$input-placeholder-color:               $gray-500 !default;
-$input-focus-placeholder-color:         $gray-500 !default;
+$input-placeholder-color:               $gray-600 !default;
+$input-focus-placeholder-color:         $gray-600 !default;
 
+$input-height:                          50px !default;
 $input-height-border:                   $input-border-width * 2 !default;
 
 $input-transition:                      all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -606,7 +611,7 @@ $custom-toggle-checked-bg:  theme-color("primary") !default;
 $form-feedback-valid-bg:         lighten($success, 15%);
 $form-feedback-valid-color:      theme-color("success") !default;
 $form-feedback-invalid-bg:       lighten($warning, 15%);
-$form-feedback-invalid-color:    theme-color("warning") !default;
+$form-feedback-invalid-color:    $red !default;
 
 
 // Allows for customizing button radius independently from global border radius
@@ -782,11 +787,14 @@ $popover-arrow-outer-color:         transparent !default;
 // Badges
 
 $badge-font-size:                   13px !default;
-$badge-font-weight:                 $font-weight-bold !default;
-$badge-padding-y:                   .25rem !default;
-$badge-padding-x:                   .31rem !default;
+$badge-font-weight:                 500 !default;
+$badge-padding-y:                   .22rem !default;
+$badge-padding-x:                   .38rem !default;
 $badge-border-radius:               $border-radius !default;
 $badge-text-transfom:               uppercase;
+
+$badge-lg-padding-y:                   .535rem !default;
+$badge-lg-padding-x:                   .74rem !default;
 
 $badge-pill-padding-x:              .875em !default;
 $badge-pill-border-radius:          10rem !default;
@@ -804,19 +812,20 @@ $badge-circle-size:                 2rem;
 // $pagination-line-height:            1.25 !default;
 
 $pagination-color:                  $black !default;
-$pagination-bg:                     $white  !default;
+$pagination-bg:                     #fff  !default;
 $pagination-border-width:           2px !default;
+$pagination-gap:                    8px !default;
 $pagination-border-color:           transparent !default;
 $pagination-box-shadow:             0px 3px 10px rgba(0, 0, 0, 0.1) !default;
 
 $pagination-focus-box-shadow:       0px 10px 20px rgba(0, 0, 0, 0.15) !default;
 
 $pagination-hover-color:            $white !default;
-$pagination-hover-bg:               $default !default;
+$pagination-hover-bg:               $primary !default;
 $pagination-hover-border-color:     transparent !default;
 
 $pagination-active-color:           $white !default;
-$pagination-active-bg:              $default !default;
+$pagination-active-bg:              $primary !default;
 $pagination-active-border-color:    $pagination-active-bg !default;
 $pagination-active-box-shadow:      $btn-hover-box-shadow !default;
 
@@ -879,13 +888,13 @@ $modal-header-padding:        1.25rem !default;
 // Datepicker
 
 $datepicker-border-radius: $card-border-radius !default;
-$datepicker-dropdown-padding: 20px 22px !default;
+$datepicker-dropdown-padding: 10px 13px !default;
 
 $datepicker-cell-transition: $transition-base !default;
 $datepicker-cell-hover-background: lighten($gray-400, 55%);
 $datepicker-cell-border-radius: 50% !default;
-$datepicker-cell-width: 36px !default;
-$datepicker-cell-height: 36px !default;
+$datepicker-cell-width: 30px !default;
+$datepicker-cell-height: 30px !default;
 
 $datepicker-disabled-cell-color: $gray-300 !default;
 $datepicker-disabled-old-new-color: $gray-500 !default;

@@ -1,5 +1,5 @@
 #darwinMapMainContainer {
-    background: var(--white);
+    background: $white;
     height: max-content;
     padding-top: 40px;
     padding-bottom: 50px;
@@ -15,7 +15,7 @@
             margin-bottom: 30px;
     
             .dropDownContainer {
-                color: var(--darkblue);
+                color: $darkblue;
                 cursor: pointer;
     
                 .icon-dropdown {
@@ -74,14 +74,14 @@
         border-radius: 10px;
     }
     &::-webkit-scrollbar-thumb:hover {
-        background: var(--gray); 
+        background: $gray; 
     }
 
     .shopState {
         display: block;
         font-weight: 500;
         margin-top: 20px;
-        color: var(--gray);
+        color: $gray;
         margin-bottom: 10px;
     }
 }
@@ -92,11 +92,11 @@
     grid-template-columns: 100%;
     &.closestShop {
         .shopAdress {
-            color: var(--darkblue);
+            color: $darkblue;
             font-weight: 600;
         }
         .badge {
-            background: var(--darkblue);
+            background: $darkblue;
         }
         .shopAdressSpan {
             max-width: 53vw !important;
@@ -107,7 +107,7 @@
             font-weight: 600;
         }
         .badge {
-            background: var(--yellow);
+            background: $yellow;
         }
         .shopAdressSpan {
             max-width: 53vw !important;
@@ -117,7 +117,7 @@
     .shopAdress {
         width: 100%;
         display: grid;
-        color: var(--black);
+        color: $default;
         font-weight: 500;
         margin-bottom: 3px;
         height: max-content;
@@ -135,7 +135,7 @@
             min-width: 75px;
             justify-self: end;
             align-self: center;
-            color: var(--white);
+            color: $white;
             font-size: 14px;
             line-height: 14px;
             padding-top: 2.5px;
@@ -150,7 +150,7 @@
     }
     .shopTime {
         display: block;
-        color: var(--gray);
+        color: $gray;
 
         i {
             font-size: 19px;
@@ -160,7 +160,7 @@
     }
     .shopContact {
         display: block;
-        color: var(--black);
+        color: $default;
         font-weight: 500;
     }
 }
@@ -170,7 +170,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: var(--white);
+    background: $white;
 }
 .leaflet-bottom.leaflet-right,.leaflet-top.leaflet-left {
     display: none !important;
@@ -192,7 +192,7 @@
             font-weight: 700;
         }
         #darwinMapUnderline {
-            color: var(--black);
+            color: $default;
             font-size: 12px;
             line-height: 14px;
             font-weight: 500;
@@ -217,7 +217,7 @@
                 margin-bottom: 25px;
 
                 .dropDownContainer {
-                    color: var(--darkblue);
+                    color: $darkblue;
 
                     .icon-dropdown {
                         position: relative;
@@ -230,7 +230,7 @@
                 width: 100%;
                 height: 40px;
                 border-radius: 4px;
-                border: 3px solid var(--darkblue);
+                border: 3px solid $darkblue;
                 display: grid;
                 grid-template-columns: repeat(2,50%);
                 margin-bottom: 20px;
@@ -238,7 +238,7 @@
                 .mapToogleItem {
                     width: 100%;
                     height: 100%;
-                    color: var(--darkblue);
+                    color: $darkblue;
                     font-weight: 700;
                     transition: .3s ease;
                     text-align: center;
@@ -248,8 +248,8 @@
                     cursor: pointer;
 
                     &.toogled {
-                        color: var(--white);
-                        background: var(--darkblue);
+                        color: $white;
+                        background: $darkblue;
                     }
                 }
             }
@@ -289,7 +289,7 @@
                 width: 100%;
                 height: 329px;
                 border-radius: 4px;
-                background: var(--white);
+                background: $white;
                 display: grid;
                 grid-template-rows: max-content auto;
 

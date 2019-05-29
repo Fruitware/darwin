@@ -9,13 +9,13 @@
         width: 100%;
         height: max-content;
 
-        .icon-dropdown {
-            font-size: .5rem;
-            position: relative;
+        i {
+            display: inline-block;
+            margin-left: -5px;
             transition: .3s ease;
 
             &.dropdownActive {
-                transform: scale(-1, -1) translateY(-5.5px);
+                transform: scale(-1, -1) translateY(-31px);
             }
         }
     }

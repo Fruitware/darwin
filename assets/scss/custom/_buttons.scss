@@ -16,6 +16,9 @@
     &:not(:last-child) {
         margin-right: .5rem;
     }
+    &.btn-only-icon {
+        padding: $btn-padding-y .43rem;
+    }
 }
 
 .btn-group,
@@ -41,14 +44,14 @@
 [class*="btn-outline-"] {
     border-width: 3px;
 }
-.btn-outline-secondary {
-    color: darken(theme-color("secondary"), 50%);
+.btn-outline-white {
+    color: darken(theme-color("white"), 50%);
 }
 
 .btn-inner--icon {
     i:not(.fa) {
         position: relative;
-        top: 2px;
+        top: 1px;
     }
 }
 

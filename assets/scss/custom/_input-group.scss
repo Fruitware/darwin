@@ -21,7 +21,15 @@
 }
 
 .input-group-text {
-    transition: $input-transition;
+	font-weight: 500;
+	transition: $input-transition;
+	background: #fff;
+	max-height: 50px;
+	border-radius: $input-border-radius;
+
+	i {
+		font-size: 24px;
+	}
 }
 
 .input-group-alternative {
@@ -51,9 +59,8 @@
 	}
 
 	.input-group-text {
-	    color: $input-group-addon-focus-color;
-	    background-color: $input-group-addon-focus-bg;
-	    border-color: $input-group-addon-focus-border-color;
+	    /* color: $input-group-addon-focus-color; */
+		border-color: $input-group-addon-focus-border-color;
 	}
 
 	.form-control {

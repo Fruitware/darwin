@@ -5,17 +5,25 @@ label {
 }
 
 .form-control {
+    background: #fff;
     font-size: $input-btn-font-size;
+    font-weight: 500;
     
     
     &:focus {
+        background-color: #fff !important;
+        border-color: $input-focus-border-color;
         &::placeholder {
             color: $input-focus-placeholder-color;
         }
     }
-}
-textarea.form-control {
-    background: #fff;
+    &:hover {
+
+    }
+    &:disabled {
+        background: $white;
+        border-color: $white;
+    }
 }
 
 
@@ -70,7 +78,8 @@ textarea[resize="horizontal"] {
 // Validation
 
 .has-success,
-.has-danger {
+.has-danger,
+.has-warning {
     position: relative;
 
     &:after {
@@ -78,11 +87,11 @@ textarea[resize="horizontal"] {
         height: 19px;
         line-height: 19px;
         text-align: center;
-        font-family: 'NucleoIcons';
+        font-family: 'fontello';
         display: inline-block;
         position: absolute;
-        right: 15px;
-        top: 2px;
+        right: 20px;
+        top: 7px;
         transform: translateY(50%);
         border-radius: 50%;
         font-size: 9px;
@@ -92,15 +101,23 @@ textarea[resize="horizontal"] {
 
 .has-success {
     &:after {
-        content: "\ea26";
-        color: daken($form-feedback-valid-color, 18%);
-        background-color: $form-feedback-valid-bg;
+        content: "\e82f";
+        color: $form-feedback-valid-color;
+        font-size: 24px;
+    }
+
+    &.focused {
+        &:after {
+            opacity: 0;
+        }
     }
     .form-control {
-        background-color: $input-focus-bg;
-
+        border-color: $form-feedback-valid-color;
         &:focus {
             border-color: $input-focus-border-color;
+            &::placeholder {
+                color: $input-focus-placeholder-color;
+            }
         }
 
         // Placeholder
@@ -108,36 +125,50 @@ textarea[resize="horizontal"] {
             color: $form-feedback-valid-color;
         }
     }
-
-    &.focused {
-        &:after {
-            //opacity: 0;
-        }
-    }
 }
 
-.has-danger {
+.has-danger,.has-warning {
     &:after {
-        content: "\ea53";
-        color: daken($form-feedback-invalid-color, 18%);
-        background-color: $form-feedback-invalid-bg;
+        content: "Внимание";
+        width: max-content;
+        font-weight: 500;
+        font-family: 'Noir Pro', sans-serif;
+        font-size: 14px;
+    }
+    &.has-warning {
+        &:after {
+            color: $yellow;
+        }
+        .form-control {
+            border-color: $yellow;
+            &::placeholder {
+                color: $yellow;
+            }
+        }
+    }
+    &.has-danger {
+        &:after {
+            color: $form-feedback-invalid-color;
+        }
+        .form-control {
+            border-color: $form-feedback-invalid-color;
+            &::placeholder {
+                color: $form-feedback-invalid-color;
+            }
+        }
     }
     .form-control {
-        background-color: $input-focus-bg;
-
         &:focus {
             border-color: $input-focus-border-color;
-        }
-
-        // Placeholder
-        &::placeholder {
-            color: $form-feedback-invalid-color;
+            &::placeholder {
+                color: $input-focus-placeholder-color;
+            }
         }
     }
 
     &.focused {
         &:after {
-            //opacity: 0;
+            opacity: 0 !important;
         }
     }
 }

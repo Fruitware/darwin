@@ -1,6 +1,8 @@
 // Custom datepickers
 .datepicker {
+    position: absolute;
     border-radius: $datepicker-border-radius;
+    background-color: #fff;
 
     &-inline {
         width: 220px;

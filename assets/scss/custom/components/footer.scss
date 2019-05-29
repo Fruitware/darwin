@@ -71,11 +71,11 @@
                     position: relative;
                     top: -2px;
                 }
-                &.icon-facebook {color: var(--darkblue)}
-                &.icon-instagram {color: var(--pink)}
-                &.icon-youtube {color: var(--red)}
-                &.icon-vk {color: var(--blue)}
-                &.icon-odnoklassniki {color: var(--orange)}
+                &.icon-facebook {color: $darkblue}
+                &.icon-instagram {color: $pink}
+                &.icon-youtube {color: $red}
+                &.icon-vk {color: $blue}
+                &.icon-odnoklassniki {color: $orange}
             }
         }
     }
@@ -151,6 +151,13 @@
         }
         .dropDownContainer {
             width: 100%;
+            .mainContainer {
+                i {
+                    &.dropdownActive {
+                        transform: scale(-1, -1) translateY(-6px);
+                    }
+                }
+            }
         }
         .footerSecondHeadline {
             width: 100% !important;

@@ -83,6 +83,8 @@
         margin: 0;
         -webkit-touch-callout: none;
         user-select: none;
+        color: $black;
+        font-weight: 500;
 
         tr {
             td {
@@ -229,6 +231,7 @@
             background: $datepicker-active-background;
             color: $datepicker-active-color;
             box-shadow: $datepicker-active-box-shadow;
+            font-weight: 600;
         }
 
         span {
